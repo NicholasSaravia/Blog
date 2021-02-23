@@ -1,0 +1,12 @@
+C:\Users\nicks\source\repos\Blog\D.L\bin\Debug\netcoreapp3.1\D.L.deps.json
+C:\Users\nicks\source\repos\Blog\D.L\bin\Debug\netcoreapp3.1\D.L.runtimeconfig.json
+C:\Users\nicks\source\repos\Blog\D.L\bin\Debug\netcoreapp3.1\D.L.runtimeconfig.dev.json
+C:\Users\nicks\source\repos\Blog\D.L\bin\Debug\netcoreapp3.1\D.L.dll
+C:\Users\nicks\source\repos\Blog\D.L\bin\Debug\netcoreapp3.1\D.L.pdb
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.csprojAssemblyReference.cache
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.AssemblyInfoInputs.cache
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.AssemblyInfo.cs
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.csproj.CoreCompileInputs.cache
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.dll
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.pdb
+C:\Users\nicks\source\repos\Blog\D.L\obj\Debug\netcoreapp3.1\D.L.genruntimeconfig.cache

@@ -2,3 +2,14 @@ C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\D.L.dll
 C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.csprojAssemblyReference.cache
 C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.AssemblyInfoInputs.cache
 C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.AssemblyInfo.cs
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\P.L.deps.json
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\P.L.runtimeconfig.json
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\P.L.runtimeconfig.dev.json
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\P.L.dll
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\P.L.pdb
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\D.L.pdb
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.csproj.CoreCompileInputs.cache
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.csproj.CopyComplete
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.dll
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.pdb
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.genruntimeconfig.cache
