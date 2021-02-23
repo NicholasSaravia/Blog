@@ -2,20 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
-      "A.L/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "D.L": "1.0.0",
-          "P.L": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/A.L.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/A.L.dll": {}
-        }
-      },
       "D.L/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -42,11 +28,6 @@
     }
   },
   "libraries": {
-    "A.L/1.0.0": {
-      "type": "project",
-      "path": "../A.L/A.L.csproj",
-      "msbuildProject": "../A.L/A.L.csproj"
-    },
     "D.L/1.0.0": {
       "type": "project",
       "path": "../D.L/D.L.csproj",
@@ -60,7 +41,8 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "A.L >= 1.0.0"
+      "D.L >= 1.0.0",
+      "P.L >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -69,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nicks\\source\\repos\\Blog\\API\\API.csproj",
-      "projectName": "API",
-      "projectPath": "C:\\Users\\nicks\\source\\repos\\Blog\\API\\API.csproj",
+      "projectUniqueName": "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\A.L.csproj",
+      "projectName": "A.L",
+      "projectPath": "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\A.L.csproj",
       "packagesPath": "C:\\Users\\nicks\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nicks\\source\\repos\\Blog\\API\\obj\\",
+      "outputPath": "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\nicks\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -90,8 +72,11 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\A.L.csproj": {
-              "projectPath": "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\A.L.csproj"
+            "C:\\Users\\nicks\\source\\repos\\Blog\\D.L\\D.L.csproj": {
+              "projectPath": "C:\\Users\\nicks\\source\\repos\\Blog\\D.L\\D.L.csproj"
+            },
+            "C:\\Users\\nicks\\source\\repos\\Blog\\P.L\\P.L.csproj": {
+              "projectPath": "C:\\Users\\nicks\\source\\repos\\Blog\\P.L\\P.L.csproj"
             }
           }
         }
@@ -116,9 +101,6 @@
         "assetTargetFallback": true,
         "warn": true,
         "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
