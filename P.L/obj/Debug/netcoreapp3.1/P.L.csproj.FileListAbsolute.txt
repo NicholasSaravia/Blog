@@ -1,0 +1,4 @@
+C:\Users\nicks\source\repos\Blog\P.L\bin\Debug\netcoreapp3.1\D.L.dll
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.csprojAssemblyReference.cache
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.AssemblyInfoInputs.cache
+C:\Users\nicks\source\repos\Blog\P.L\obj\Debug\netcoreapp3.1\P.L.AssemblyInfo.cs
