@@ -72,3 +72,4 @@ C:\Users\nicks\source\repos\Blog\API\obj\Debug\netcoreapp3.1\API.pdb
 C:\Users\nicks\source\repos\Blog\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
 C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

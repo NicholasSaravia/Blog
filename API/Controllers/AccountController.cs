@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 using API.Dtos;
 using API.Services;
 using D.L.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
@@ -26,6 +28,7 @@ namespace API.Controllers
             _tokenService = tokenService;
         }
 
+        [AllowAnonymous]
         [HttpPost("login")]
         public async Task<ActionResult<UserDto>> Login(LoginDto loginDto)
         {
@@ -49,6 +52,44 @@ namespace API.Controllers
             return Unauthorized();
         }
 
-        
+        [AllowAnonymous]
+        [HttpPost("register")]
+        public async Task<ActionResult<UserDto>> Register(RegisterDto register)
+        {
+            if (await _userManager.Users.AnyAsync(x => x.Email == register.Email))
+            {
+                return BadRequest("Email Taken");
+            }
+
+            if (await _userManager.Users.AnyAsync(x => x.UserName == register.Username))
+            {
+                return BadRequest("Username Taken");
+            }
+
+            var user = new AppUser()
+            {
+                DisplayName = register.DisplayName,
+                Email = register.Email,
+                UserName = register.Username
+            };
+
+            var result = await _userManager.CreateAsync(user, register.Password);
+
+            if (result.Succeeded)
+            {
+                return Ok(new UserDto()
+                {
+                    DisplayName = user.DisplayName,
+                    Image = null,
+                    Token = _tokenService.CreateToken(user),
+                    Username = user.UserName
+                });
+            }
+
+            return BadRequest("Problem registering user");
+
+        }
+
+
     }
 }
