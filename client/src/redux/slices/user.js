@@ -1,14 +1,19 @@
 import { createSlice } from '@reduxjs/toolkit'
-import { IUser } from '../../interfaces/IUser'
 
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    user: IUser
+    info: {
+      username: null,
+      displayName: null,
+      token: null,
+      img: null
+    }
   },
   reducers: {
     setUser: (state, action) => {
-      state.user = action.payload;
+      console.log(state, action);
+      state.info = action.payload;
     }
   }
 })
@@ -16,4 +21,4 @@ export const userSlice = createSlice({
 // Action creators are generated for each case reducer function
 export const { setUser } = userSlice.actions
 
-export default userSlice.reducer
+export default userSlice.reducer        
