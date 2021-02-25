@@ -1,6 +1,7 @@
-import axios from "axios";
+
 import React, { FormEvent, FormEventHandler, useState } from "react";
 import { Button, Form } from "semantic-ui-react";
+import agent from "../api/agent";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -8,8 +9,9 @@ export const Login = () => {
 
   const loginHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    axios.post("https://localhost:5001/api/account/login", {email, password})
-    .then(response => console.log(response));
+    agent.account
+      .login({ email, password })
+      .then((response) => console.log(response));
   };
 
   return (
