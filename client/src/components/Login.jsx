@@ -9,19 +9,19 @@ export const Login = () => {
     const dispatch = useDispatch();
     let history = useHistory();
 
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-
-    
 
     const handleSubmit = (e) => {
         e.preventDefault();
         agent.userActions
           .login({ email, password })
           .then((user) => {
-            dispatch(setUser(user));
+            // set token in local storage
             localStorage.setItem("token", `bearer ${user.token}`);
+            // set user to state
+            dispatch(setUser(user));
+            // after user is found send to profile
             const location = {
               pathname: `/profile/${user.displayName}`,
               state: { fromLogin: true },

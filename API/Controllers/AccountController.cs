@@ -40,13 +40,7 @@ namespace API.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(new UserDto()
-                {
-                    DisplayName = user.DisplayName,
-                    Image = null,
-                    Token = _tokenService.CreateToken(user),
-                    Username = user.UserName
-                });
+                return GetUserDto(user);
             }
 
             return Unauthorized();
@@ -77,19 +71,33 @@ namespace API.Controllers
 
             if (result.Succeeded)
             {
-                return Ok(new UserDto()
-                {
-                    DisplayName = user.DisplayName,
-                    Image = null,
-                    Token = _tokenService.CreateToken(user),
-                    Username = user.UserName
-                });
+                return GetUserDto(user);
             }
 
             return BadRequest("Problem registering user");
 
         }
 
+        [AllowAnonymous]
+        [HttpPost("getUser")]
+        public async Task<ActionResult<UserDto>> GetUser()
+        {
+            if (User == null)
+                return Unauthorized();
+                
+            var user = await _userManager.GetUserAsync(User);
+            return GetUserDto(user);
+        }
 
+        private UserDto GetUserDto(AppUser user)
+        {
+            return new UserDto()
+            {
+                DisplayName = user.DisplayName,
+                Image = null,
+                Token = _tokenService.CreateToken(user),
+                Username = user.UserName
+            };
+        }
     }
 }
