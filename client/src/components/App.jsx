@@ -1,48 +1,66 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {BrowserRouter as Router, Redirect, Route, Switch, useHistory} from 'react-router-dom'
+import {BrowserRouter as Router, Link, Redirect, Route, Switch, useHistory} from 'react-router-dom'
 import { agent } from '../api/agent';
 import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
 import { setUser } from '../redux/slices/user';
-import { Login } from './Login';
+import { Loading } from './Loading';
 
 export const App = () => {
-  const user = useSelector(state => state.user);
+  const user = useSelector(state => state.user.info);
   const dispatch = useDispatch();
-  
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     // get user if we have the token
-    if (user.info.username === null && !!localStorage.token) {
+    if (user.username === null && !!localStorage.token) {
       agent.userActions
         .getUser()
         .then((user) => {
           dispatch(setUser(user));
-        });
+        }).then(() => {
+          setLoading(false);
+        })
+    }else{
+      setLoading(false);
     }
-  }, [])
+  }, []);
+
+  const routes = (
+    <Switch>
+      <Route path="/login">
+        {user.username == null ? (
+          <LoginRegisterContainer></LoginRegisterContainer>
+        ) : (
+          <Redirect to={{ pathname: "/profile/nick" }}></Redirect>
+        )}
+      </Route>
+      <Route path="/profile/:displayName">
+        <div>hi {user.displayName}</div>
+      </Route>
+      <Route exact path="/">
+        <div>home page</div>
+      </Route>
+      <Route>
+        <div>This page does not exist</div>
+      </Route>
+    </Switch>
+  );
 
   return (
-
     <Router>
-
+      <nav>
+        <Link to="/login">login</Link>
+        <Link to={{pathname: "/profile/nick"}}>profile</Link>
+        <Link to="/">home</Link>
+      </nav>
       {/* force token to be real */}
       {!localStorage.token ? <Redirect to="/login"></Redirect> : null}
 
+      {loading ? <Loading></Loading> : routes}
 
-      <Switch>
-        <Route path="/login">
-            <LoginRegisterContainer></LoginRegisterContainer>
-        </Route>
-        <Route path="/profile/:displayName">
-          <div>hi {user.info.displayName}</div>
-        </Route>
-        <Route exact path="/">
-          <div>home page</div>
-        </Route>
-        <Route>
-          <div>This page does not exist</div>
-        </Route>
-      </Switch>
     </Router>
   );
+
+ 
 }

@@ -4,14 +4,17 @@ import { Redirect, useHistory } from 'react-router-dom';
 import { Button, Card, Container, Grid } from 'semantic-ui-react'
 import { Login } from '../components/Login'
 import { Register } from '../components/Register';
-import '../css/loginRegister.css';
 
 export const LoginRegisterContainer = () => {
 
     const [loggingIn, setloggingIn] = useState(true);
+    const user = useSelector(state => state.user.info);
 
     return (
       <React.Fragment>
+
+        {user.username !== null ? <Redirect to={{pathname: `/profile/${user.displayName}`}}></Redirect> : null}
+
         <Container>
           <Card>
             <Card.Content>
