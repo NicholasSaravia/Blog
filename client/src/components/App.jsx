@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {BrowserRouter as Router, Link, Redirect, Route, Switch, useHistory} from 'react-router-dom'
+import {BrowserRouter as Router, Link, NavLink, Redirect, Route, Switch, useHistory} from 'react-router-dom'
 import { agent } from '../api/agent';
 import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
 import { setUser } from '../redux/slices/user';
@@ -47,18 +47,35 @@ export const App = () => {
     </Switch>
   );
 
+  const nav = () => {
+   const activeStyle = {
+           fontWeight: "bold",
+           color: "red",
+         }
+   
+   return (
+     <nav>
+       <NavLink exact to="/" activeStyle={activeStyle}>
+         Home
+       </NavLink>
+       <NavLink to="/login" activeStyle={activeStyle}>
+         Login
+       </NavLink>
+       <NavLink
+         to={{ pathname: `/profile/${user.displayName}` }}
+         activeStyle={activeStyle}
+       >
+         Profile
+       </NavLink>
+     </nav>
+   );
+  };
+
   return (
     <Router>
-      <nav>
-        <Link to="/login">login</Link>
-        <Link to={{pathname: "/profile/nick"}}>profile</Link>
-        <Link to="/">home</Link>
-      </nav>
-      {/* force token to be real */}
-      {!localStorage.token ? <Redirect to="/login"></Redirect> : null}
-
+      {/* token must exist */}
+      {!localStorage.token ? <Redirect to="/login"></Redirect> : nav()}
       {loading ? <Loading></Loading> : routes}
-
     </Router>
   );
 

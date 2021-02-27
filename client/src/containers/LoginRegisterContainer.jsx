@@ -4,6 +4,7 @@ import { Redirect, useHistory } from 'react-router-dom';
 import { Button, Card, Container, Grid } from 'semantic-ui-react'
 import { Login } from '../components/Login'
 import { Register } from '../components/Register';
+import "../css/loginRegister.css";
 
 export const LoginRegisterContainer = () => {
 
@@ -15,7 +16,7 @@ export const LoginRegisterContainer = () => {
 
         {user.username !== null ? <Redirect to={{pathname: `/profile/${user.displayName}`}}></Redirect> : null}
 
-        <Container>
+        <Container className="login-register">
           <Card>
             <Card.Content>
               {loggingIn ? <Login></Login> : <Register></Register>}
