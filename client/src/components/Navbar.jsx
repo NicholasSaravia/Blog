@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import { setUser } from '../redux/slices/user';
 
@@ -9,6 +9,16 @@ export const Navbar = ({user}) => {
     const [activeItem, setActiveItem] = useState("home");
     const history = useHistory();
     const dispatch = useDispatch();
+    const location = useLocation();
+    
+    useEffect(() => {
+      setLocation(location.pathname);
+    }, [])
+
+    const setLocation = (pathname) => {
+      const currentLoc = location.pathname.split("/")[1];
+      currentLoc === "" ? setActiveItem("home") : setActiveItem(currentLoc);
+    }
 
     const handleItemClick = (e, {name}) => {
       setActiveItem(name);
