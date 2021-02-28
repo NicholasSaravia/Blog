@@ -1,7 +1,8 @@
 ./API/bin
-./API/bin
 ./API/obj
-./API/obj
-./API/obj
+./A.L/bin
+./A.L/obj
+./D.L/bin
 ./D.L/obj
+./P.L/bin
 ./P.L/obj
