@@ -5,6 +5,7 @@ import { agent } from '../api/agent';
 import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
 import { setUser } from '../redux/slices/user';
 import { Loading } from './Loading';
+import { Navbar } from './Navbar';
 
 export const App = () => {
   const user = useSelector(state => state.user.info);
@@ -47,34 +48,10 @@ export const App = () => {
     </Switch>
   );
 
-  const nav = () => {
-   const activeStyle = {
-           fontWeight: "bold",
-           color: "red",
-         }
-   
-   return (
-     <nav>
-       <NavLink exact to="/" activeStyle={activeStyle}>
-         Home
-       </NavLink>
-       <NavLink to="/login" activeStyle={activeStyle}>
-         Login
-       </NavLink>
-       <NavLink
-         to={{ pathname: `/profile/${user.displayName}` }}
-         activeStyle={activeStyle}
-       >
-         Profile
-       </NavLink>
-     </nav>
-   );
-  };
-
   return (
     <Router>
       {/* token must exist */}
-      {!localStorage.token ? <Redirect to="/login"></Redirect> : nav()}
+      {!localStorage.token ? <Redirect to="/login"></Redirect> : <Navbar user={user}></Navbar>}
       {loading ? <Loading></Loading> : routes}
     </Router>
   );
