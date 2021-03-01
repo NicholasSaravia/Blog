@@ -1,4 +1,5 @@
 import React from 'react'
+import { TextEditor } from '../components/Common/TextEditor'
 import { User } from '../components/Profile/User'
 
 export const Profile = () => {
@@ -9,7 +10,7 @@ export const Profile = () => {
                     <User></User>
                 </section>
                 <section className="profile_left_createPost">
-                    
+                    <TextEditor></TextEditor>
                 </section>
             </section>
             <section className="profile_right">
