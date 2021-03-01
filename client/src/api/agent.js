@@ -14,7 +14,8 @@ const methods = {
 
 const userActions = {
     login: (body) => methods.post("account/login", body),
-    getUser: (body) => methods.post("account/getUser", body) 
+    getUser: (body) => methods.post("account/getUser", body),
+    register: (body) => methods.post("account/register", body)
 }
 
 export const agent = {

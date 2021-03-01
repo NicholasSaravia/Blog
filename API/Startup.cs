@@ -28,7 +28,7 @@ namespace API
                 options.AddPolicy("dev",
                       builder =>
                       {
-                          builder.WithOrigins("http://localhost:3000")
+                          builder.WithOrigins("http://localhost:3000", "https://localhost:3000")
                           .AllowAnyHeader()
                           .AllowAnyMethod();
                       });

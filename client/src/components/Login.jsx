@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, Form } from 'semantic-ui-react'
@@ -11,6 +11,11 @@ export const Login = () => {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const emailRef = useRef();
+
+    useEffect(() => {
+      emailRef.current.focus();
+    }, [])
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -34,13 +39,13 @@ export const Login = () => {
     }
 
     return (
-
       <Form onSubmit={(e) => handleSubmit(e)}>
         <Form.Field>
           <label>Email</label>
           <input
             placeholder="Email"
             value={email}
+            ref={emailRef}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Field>
@@ -53,7 +58,13 @@ export const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </Form.Field>
-        <Button type="submit">Submit</Button>
+        <Button
+          disabled={email.trim() === "" || password.trim() === ""}
+          type="submit"
+          fluid
+        >
+          Submit
+        </Button>
       </Form>
     );
 }
