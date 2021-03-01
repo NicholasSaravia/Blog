@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import {BrowserRouter as Router, Link, NavLink, Redirect, Route, Switch, useHistory} from 'react-router-dom'
+import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import { agent } from '../api/agent';
 import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
 import { setUser } from '../redux/slices/user';
@@ -13,7 +13,7 @@ export const App = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // get user if we have the token
+    
     if (user.username === null && !!localStorage.token) {
       agent.userActions
         .getUser()
