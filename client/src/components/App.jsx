@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import { agent } from '../api/agent';
 import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
+import { Profile } from '../containers/Profile';
 import { setUser } from '../redux/slices/user';
 import { Loading } from './Loading';
 import { Navbar } from './Navbar';
@@ -37,7 +38,7 @@ export const App = () => {
         )}
       </Route>
       <Route path="/profile/:displayName">
-        <div>hi {user.displayName}</div>
+        <Profile></Profile>
       </Route>
       <Route exact path="/">
         <div>home page</div>
