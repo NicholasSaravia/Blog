@@ -1,0 +1,13 @@
+.profile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+}
+.profile_left{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+}
+.profile_right{
+
+}

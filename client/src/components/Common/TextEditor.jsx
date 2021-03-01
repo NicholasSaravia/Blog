@@ -14,8 +14,7 @@ export const TextEditor = props => {
       ref={editorRef}
       enableToolbar
       showToolbar
-      width="100%"
-      height="100%"
+      height="300"
       onChange={handleChange}
     />
   );
