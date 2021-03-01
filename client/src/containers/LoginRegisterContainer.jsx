@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useSelector } from 'react-redux';
-import { Redirect, useHistory } from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
 import { Button, Card, Container, Divider, Grid, Icon } from 'semantic-ui-react'
 import { Login } from '../components/Login'
 import { Register } from '../components/Register';
@@ -14,7 +14,6 @@ export const LoginRegisterContainer = () => {
     const arrowDirection = loggingIn ? "arrow right" : "arrow left";
     const buttonText = loggingIn ? "Register" : "Login";
     const titleText = loggingIn ? "Login" : "Register";
-    const movieRef = useRef();
 
     const handleButtonClick = (e) => {
       e.preventDefault();

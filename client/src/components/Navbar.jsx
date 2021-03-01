@@ -12,12 +12,12 @@ export const Navbar = ({user}) => {
     const location = useLocation();
     
     useEffect(() => {
-      setLocation(location.pathname);
-    }, [])
+      const updatedPath = location.pathname.split("/")[1];
+      setLocation(updatedPath);
+    }, [activeItem])
 
     const setLocation = (pathname) => {
-      const currentLoc = location.pathname.split("/")[1];
-      currentLoc === "" ? setActiveItem("home") : setActiveItem(currentLoc);
+      pathname === "" ? setActiveItem("home") : setActiveItem(pathname);
     }
 
     const handleItemClick = (e, {name}) => {
