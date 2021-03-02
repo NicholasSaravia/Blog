@@ -73,3 +73,5 @@ C:\Users\nicks\source\repos\Blog\API\obj\Debug\netcoreapp3.1\API.genruntimeconfi
 C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Humanizer.dll
 C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\MediatR.dll
+C:\Users\nicks\source\repos\Blog\API\bin\Debug\netcoreapp3.1\MediatR.Extensions.Microsoft.DependencyInjection.dll
