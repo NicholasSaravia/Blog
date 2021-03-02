@@ -1,4 +1,6 @@
+using A.L.Services.Posts;
 using API.Extensions;
+using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -41,6 +43,7 @@ namespace API
             });
             services.AddApplicationServices(Configuration);
             services.AddIdentityServices(Configuration);
+            services.AddMediatR(typeof(List.Handler).Assembly);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

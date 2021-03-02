@@ -11,5 +11,6 @@ namespace P.L.Context
             
         }
 
-    }
+        public DbSet<Post> Posts { get; set; }
+    }   
 }

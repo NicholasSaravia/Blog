@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "qrBFmKRCLIaxWV6y6n69meyltkWBaNkKxzNqSAvdtNMaBTrYiitnYZTL+UmjHJy4m8USp56zZm2O/eeXQ5F1/g==",
+  "dgSpecHash": "nbB6DALQC6c3S2YGuhSg0085JEao3nYmwhiBp4+XwC3mdk9iKKbFniQIjjO+R8r8HJz+A9YrNs5DRz6BR62pcg==",
   "success": true,
   "projectFilePath": "C:\\Users\\nicks\\source\\repos\\Blog\\A.L\\A.L.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\nicks\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\nicks\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\5.0.3\\microsoft.aspnetcore.identity.entityframeworkcore.5.0.3.nupkg.sha512",

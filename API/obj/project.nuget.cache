@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "H5ZPLD4QHLUrCZB0xUOSBIFcYIl28XbiB9G75Mjrh8Jmy/BYrdKsj1KRXzwtWXyhJPpzkWVaWCNQQ9P+HriL9w==",
+  "dgSpecHash": "lX0MsCz24BMInOPlDPZ85aO3/GnQM0uYbiPIZKxk1v1OXOEE2IQmWZ2cD0gR3bOcKbbO1eS/9hwPuSdfS2r7xw==",
   "success": true,
   "projectFilePath": "C:\\Users\\nicks\\source\\repos\\Blog\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nicks\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\nicks\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\nicks\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.12\\microsoft.aspnetcore.authentication.jwtbearer.3.1.12.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.3\\microsoft.aspnetcore.cryptography.internal.5.0.3.nupkg.sha512",
     "C:\\Users\\nicks\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\5.0.3\\microsoft.aspnetcore.cryptography.keyderivation.5.0.3.nupkg.sha512",
