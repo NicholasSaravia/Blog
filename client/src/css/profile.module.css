@@ -9,5 +9,6 @@
     gap: 12px;
 }
 .profile_right{
-
+    display: grid;
+    justify-content: center;
 }

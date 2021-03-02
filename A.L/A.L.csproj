@@ -9,4 +9,8 @@
     <ProjectReference Include="..\P.L\P.L.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Services\Posts\" />
+  </ItemGroup>
+
 </Project>
