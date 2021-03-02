@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using A.L.Services.Posts;
 using D.L.Models;
@@ -25,6 +26,13 @@ namespace API.Controllers
         public async Task<List<Post>> ListAllPosts()
         {
             return await _mediator.Send(new List.Query());
+        }
+
+        [HttpPost]
+        public async Task<Post> Create(Post post)
+        {
+            post.AppUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            return await _mediator.Send(new Add.Command { Post = post });
         }
 
     }

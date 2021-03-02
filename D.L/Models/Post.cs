@@ -11,6 +11,7 @@ namespace D.L.Models
         [StringLength(200)]
         public string Title { get; set; }
         public string Html { get; set; }
-        public int AppUserId { get; set; }
+        [StringLength(200)]
+        public string AppUserId { get; set; }
     }
 }
