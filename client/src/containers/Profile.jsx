@@ -1,8 +1,8 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
-import { TextEditor } from '../components/Common/TextEditor'
-import { Posts } from '../components/Profile/Posts'
-import { User } from '../components/Profile/User'
+import { TextEditor } from '../components/common/TextEditor'
+import { Posts } from '../components/posts/Posts'
+import { User } from '../components/profile/User'
 import classes from '../css/profile.module.css'
 
 export const Profile = () => {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { NavLink, useHistory, useLocation } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
-import { setUser } from '../redux/slices/user';
+import { setUser } from '../../redux/slices/user';
 
 export const Navbar = ({user}) => {
 
@@ -32,12 +32,7 @@ export const Navbar = ({user}) => {
         case "logout":
           localStorage.removeItem("token");
           dispatch(
-            setUser({
-              username: null,
-              displayName: null,
-              token: null,
-              img: null,
-            })
+            setUser()
           );
         default:
           break;

@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { Button, Form } from 'semantic-ui-react';
-import { agent } from '../api/agent';
-import { setUser } from '../redux/slices/user';
+import {agent} from '../../api/agent';
+import { setUser } from '../../redux/slices/user';
 
 export const Register = () => {
     const [email, setEmail] = useState("");

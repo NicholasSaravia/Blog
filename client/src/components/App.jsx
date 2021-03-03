@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import {BrowserRouter as Router, Redirect, Route, Switch} from 'react-router-dom'
 import { agent } from '../api/agent';
-import { LoginRegisterContainer } from '../containers/LoginRegisterContainer';
+import { LoginRegister } from '../containers/LoginRegister';
 import { Profile } from '../containers/Profile';
 import { setUser } from '../redux/slices/user';
-import { Loading } from './Loading';
-import { Navbar } from './Navbar';
+import { Loading } from './layout/Loading';
+import { Navbar } from './layout/Navbar';
 
 export const App = () => {
   const user = useSelector(state => state.user.info);
@@ -47,7 +47,7 @@ export const App = () => {
     <Switch>
       <Route path="/login">
         {user.username == null ? (
-          <LoginRegisterContainer></LoginRegisterContainer>
+          <LoginRegister></LoginRegister>
         ) : (
           <Redirect to={{ pathname: "/profile/nick" }}></Redirect>
         )}
