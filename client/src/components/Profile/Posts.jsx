@@ -6,7 +6,7 @@ export const Posts = () => {
 
     return (
         <div>
-        {posts.map(p => <div>{p}</div>)}
+        {posts.map((p, i) => <div key={i}>{p}</div>)}
         </div>
     )
 }
