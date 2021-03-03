@@ -1,9 +1,9 @@
 import React from 'react'
 
-export const Loading = () => {
+export const Loading = ({children}) => {
     return (
-        <div>
-            loading...
-        </div>
+        <React.Fragment>
+            {children}
+        </React.Fragment>
     )
 }

@@ -12,6 +12,14 @@ export const userSlice = createSlice({
   },
   reducers: {
     setUser: (state, action) => {
+      if (typeof (action.payload === "undefined")) {
+        action.payload = {
+          username: null,
+          displayName: null,
+          token: null,
+          img: null,
+        };
+      };
       state.info = action.payload;
     }
   }

@@ -86,6 +86,9 @@ namespace API.Controllers
                 return Unauthorized();
                 
             var user = await _userManager.GetUserAsync(User);
+            if (user == null)
+                return Unauthorized();
+
             return GetUserDto(user);
         }
 
