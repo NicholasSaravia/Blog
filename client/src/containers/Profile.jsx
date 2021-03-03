@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
 import { TextEditor } from '../components/common/TextEditor'
+import { PostForm } from '../components/posts/PostForm'
 import { Posts } from '../components/posts/Posts'
 import { User } from '../components/profile/User'
 import classes from '../css/profile.module.css'
@@ -14,7 +15,8 @@ export const Profile = () => {
               <User></User>
             </section>
             <section className="profile_left_createPost">
-              <TextEditor></TextEditor>
+              <PostForm>
+              </PostForm>
             </section>
           </section>
           <section className={classes.profile_right}>
