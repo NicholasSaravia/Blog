@@ -4,12 +4,13 @@ export const postFormData = [
     {
         label: "Title",
         inputType: "text",
-        inputName: "title",
-        component: false
+        name: "title",
+        component: false,
+        value: "",
     },
     {
         label: "Post",
-        component: true
+        component: true,
     }
 ]
 

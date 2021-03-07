@@ -1,21 +1,21 @@
-import React, {useState, useRef, useEffect} from 'react';
+import React from 'react';
 import SunEditor from 'suneditor-react';
 import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
+import { PostForm } from '../posts/PostForm';
 
-export const TextEditor =   props => {
-    const editorRef = useRef();
+export const TextEditor = ({handleChange}) => {
 
-    const handleChange = (content) => {
-        console.log(content);
-    }
+  const changeHandler = (content) => {
+    handleChange({name: "html", value: content});
+  }
 
   return (
     <SunEditor
-      ref={editorRef}
       enableToolbar
       showToolbar
+      name="html"
       height="300"
-      onChange={handleChange}
+      onChange={changeHandler}
     />
   );
 };
