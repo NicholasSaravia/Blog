@@ -1,12 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import SunEditor from 'suneditor-react';
 import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
-import { PostForm } from '../posts/PostForm';
 
-export const TextEditor = ({handleChange}) => {
+export const TextEditor = ({onChange}) => {
 
   const changeHandler = (content) => {
-    handleChange({name: "html", value: content});
+    onChange({name: "html", value: content});
   }
 
   return (

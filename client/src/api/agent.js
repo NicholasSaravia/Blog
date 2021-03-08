@@ -18,6 +18,11 @@ const userActions = {
     register: (body) => methods.post("account/register", body)
 }
 
+const postActions = {
+    create: (body) => methods.post("post/", body)
+}
+
 export const agent = {
-    userActions
+    userActions,
+    postActions
 }

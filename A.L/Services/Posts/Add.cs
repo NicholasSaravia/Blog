@@ -29,7 +29,7 @@ namespace A.L.Services.Posts
             public async Task<Post> Handle(Command request, CancellationToken cancellationToken)
             {
                 await _context.Posts.AddAsync(request.Post);
-                _context.SaveChanges();
+                await _context.SaveChangesAsync();
                 return request.Post;
             }
         }
