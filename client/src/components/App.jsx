@@ -60,26 +60,31 @@ export const App = () => {
           <Redirect to={{ pathname: "/profile/nick" }}></Redirect>
         )}
       </Route>
-      <Route path="/profile/:displayName">
-        <Profile></Profile>
-      </Route>
-      <Route exact path="/">
-        <div>home page</div>
-      </Route>
-      <Route>
-        <div>This page does not exist</div>
-      </Route>
+
+      <section className="body">
+        <Route exact path="/">
+          <div>home page</div>
+        </Route>
+        <Route path="/profile/:displayName">
+          <Profile></Profile>
+        </Route>
+        <Route>
+          <div>This page does not exist</div>
+        </Route>
+      </section>
     </Switch>
   );
 
   return (
     <Router>
-      {/* token must exist */}
+      {/* if no token send to login */}
       {!localStorage.token ? (
         <Redirect to="/login"></Redirect>
       ) : (
         <Navbar user={user}></Navbar>
       )}
+
+      {/* loading */}
       {loading || networkError ? (
         <Loading>
           {networkError ? "Server not connected" : "Loading..."}

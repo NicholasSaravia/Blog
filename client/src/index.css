@@ -9,6 +9,12 @@
   min-width: 100%; 
   min-height: 100%;
 }
+.body{
+  padding-top: 50px;
+}
+.nav{
+  background: white !important;
+}
 
 .padding_10{
   padding:10px;

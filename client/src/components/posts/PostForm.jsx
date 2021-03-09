@@ -10,7 +10,6 @@ export const PostForm = () => {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      console.log(post);
       agent.postActions.create(post);
     }
     const handleChange = (obj) => {

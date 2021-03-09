@@ -40,7 +40,7 @@ export const Navbar = ({user}) => {
     };
 
     return (
-        <Menu pointing secondary>
+        <Menu pointing secondary fixed="top" className="nav">
           <Menu.Item
             name="home"
             active={activeItem === "home"}
