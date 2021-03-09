@@ -25,7 +25,10 @@ export const App = () => {
            setLoading(false);
          }).catch((error) =>{ 
            // user is unauthorized
-           if (error.response.data.status == 401){
+           if (!!error){
+              setNetworkError(true);
+           }
+           else if (error.response.data.status == 401){
              localStorage.removeItem("token");
              dispatch(setUser());
            }
