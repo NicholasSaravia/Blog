@@ -22,18 +22,26 @@ namespace API.Controllers
             _mediator = mediator;
         }
 
-        [HttpGet("home")]
+        [HttpGet]
         public async Task<List<Post>> ListAllPosts()
         {
             return await _mediator.Send(new List.Query());
         }
 
-        [HttpPost]
+        [HttpGet("posts")]
+        public async Task<List<Post>> GetUserPosts()
+        {
+            var appUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            return await _mediator.Send(new UserList.Query { AppUserId = appUserId });
+        }
+
+        [HttpPost()]
         public async Task<Post> Create(Post post)
         {
             post.AppUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
             return await _mediator.Send(new Add.Command { Post = post });
         }
+
 
     }
 }

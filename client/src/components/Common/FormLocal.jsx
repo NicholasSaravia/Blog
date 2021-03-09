@@ -34,7 +34,7 @@ export const FormLocal = ({
   };
 
   return (
-    <Card>
+    <Card fluid>
       <Card.Content header={formTitle}></Card.Content>
       <Card.Content>
         <Form onSubmit={(e) => handleSubmit(e)}>

@@ -9,3 +9,10 @@
   min-width: 100%; 
   min-height: 100%;
 }
+
+.padding_10{
+  padding:10px;
+}
+.padding_10_20{
+  padding: 10px 20px;
+}

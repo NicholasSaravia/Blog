@@ -8,7 +8,7 @@ import classes from '../css/profile.module.css'
 
 export const Profile = () => {
     return (
-      <Container>
+      <Container fluid className="padding_10_20">
         <section className={classes.profile}>
           <section className={classes.profile_left}>
             <section className="profile_left_user">

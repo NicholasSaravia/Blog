@@ -10,11 +10,7 @@ namespace A.L.Services.Posts
     {
         public class Command : IRequest<Post>
         {
-            public Post Post
-            {
-                get;
-                set;
-            }
+            public Post Post { get; set; }
         }
 
         public class Handler : IRequestHandler<Command, Post>

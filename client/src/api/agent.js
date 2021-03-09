@@ -1,9 +1,12 @@
 import axios from 'axios';
 
-//axios.defaults.baseURL = "https://localhost:5001/api/";
-axios.defaults.baseURL = "https://localhost:44321/api/";
+axios.defaults.baseURL = "https://localhost:5001/api/";
+//axios.defaults.baseURL = "https://localhost:44321/api/";
 axios.defaults.responseType = "json";
-axios.defaults.headers.common = {'Authorization': `${localStorage.token}`}
+axios.defaults.headers.common = {
+  "Authorization": `${localStorage.token}`,
+  "Access-Control-Allow-Origin": "*",
+};
 
 const methods = {
     get: (url) => axios.get(url).then(response => response.data),
@@ -20,7 +23,8 @@ const userActions = {
 }
 
 const postActions = {
-    create: (body) => methods.post("post/", body)
+    create: (body) => methods.post("post/", body),
+    getUserPosts: () => methods.get("post/posts")
 }
 
 export const agent = {
