@@ -23,17 +23,23 @@ export const App = () => {
          })
          .then(() => {
            setLoading(false);
-         }).catch((error) =>{ 
-           // user is unauthorized
-           if (!!error){
-              setNetworkError(true);
+         })
+         .catch((error) => {
+           // server is off
+           if (typeof error.response === "undefined") {
+             setNetworkError(true);
            }
-           else if (error.response.data.status == 401){
+           // user is unauthorized
+           else if (error.response.status == 401) {
              localStorage.removeItem("token");
              dispatch(setUser());
            }
-                
-          });
+           // catch all
+           else {
+             localStorage.removeItem("token");
+             dispatch(setUser());
+           }
+         });
      } else {
        setLoading(false);
      }
@@ -43,8 +49,7 @@ export const App = () => {
   useEffect(() => {
     handleGetSetUser();
   }, []);
-  useEffect(() => {
-  }, [user]);
+
 
   const routes = (
     <Switch>
