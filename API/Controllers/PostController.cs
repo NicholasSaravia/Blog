@@ -35,7 +35,7 @@ namespace API.Controllers
             return await _mediator.Send(new UserList.Query { AppUserId = appUserId });
         }
 
-        [HttpPost()]
+        [HttpPost]
         public async Task<Post> Create(Post post)
         {
             post.AppUserId = User.FindFirst(ClaimTypes.NameIdentifier).Value;
