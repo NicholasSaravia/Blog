@@ -10,16 +10,20 @@ import { Navbar } from './layout/Navbar';
 
 export const App = () => {
   const user = useSelector(state => state.user.info);
+  const [userCopy, setUserCopy] = useState({})
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(true);
   const [networkError, setNetworkError] = useState(false);
   
   const handleGetSetUser = () => {
      if (user.username === null && !!localStorage.token) {
+        
        agent.userActions
          .getUser()
          .then((user) => {
            dispatch(setUser(user));
+           setUserCopy(user);
+           console.log("got user", user);
          })
          .then(() => {
            setLoading(false);
@@ -49,6 +53,8 @@ export const App = () => {
   useEffect(() => {
     handleGetSetUser();
   }, []);
+ 
+  
 
 
   const routes = (
@@ -81,7 +87,7 @@ export const App = () => {
       {!localStorage.token ? (
         <Redirect to="/login"></Redirect>
       ) : (
-        <Navbar user={user}></Navbar>
+        <Navbar user={userCopy}></Navbar>
       )}
 
       {/* loading */}
