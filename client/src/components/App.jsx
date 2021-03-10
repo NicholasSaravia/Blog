@@ -68,10 +68,10 @@ export const App = () => {
         <Route path="/profile/:displayName">
           <Profile></Profile>
         </Route>
-        <Route>
-          <div>This page does not exist</div>
-        </Route>
       </section>
+      <Route>
+        <div>This page does not exist</div>
+      </Route>
     </Switch>
   );
 
