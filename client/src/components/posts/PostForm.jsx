@@ -3,14 +3,20 @@ import { FormLocal } from '../common/FormLocal'
 import { TextEditor } from '../common/TextEditor';
 import {postFormData} from '../../jasonData/data'
 import { agent } from "../../api/agent";
+import { useDispatch } from "react-redux";
+import {addPost} from '../../redux/slices/post';
 
 export const PostForm = () => {
 
     const [post, setPost] = useState({});
+    const dispatch = useDispatch();
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      agent.postActions.create(post);
+      agent.postActions.create(post).then((createdPost) => {
+          console.log(createdPost);
+          dispatch(addPost(post));
+      });
     }
     const handleChange = (obj) => {
       let postCopy = {...post};

@@ -12,7 +12,7 @@ export const Posts = () => {
     useEffect(() => {
       if (userPosts.length === 0) {
         agent.postActions.getUserPosts().then((posts) => {
-            dispatch(setUserPosts(posts));
+            dispatch(setUserPosts(posts)) ;
         });
       }
     }, []);
