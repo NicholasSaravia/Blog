@@ -22,7 +22,7 @@ export const PostForm = () => {
   };
 
   return (
-    <FormLocal formTitle="Create Post" body={postFormData} handleSubmit={handleChange} handleChange={handleChange}>
+    <FormLocal formTitle="Create Post" body={postFormData} handleSubmit={handleSubmit} handleChange={handleChange}>
       <TextEditor handleChange={handleChange}></TextEditor>
     </FormLocal>
   );
