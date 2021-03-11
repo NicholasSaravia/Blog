@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import SunEditor from 'suneditor-react';
 import 'suneditor/dist/css/suneditor.min.css'; // Import Sun Editor's CSS File
 
-export const TextEditor = ({onChange}) => {
+export const TextEditor = ({handleChange}) => {
 
   const changeHandler = (content) => {
-    onChange({name: "html", value: content});
+    handleChange({name: "html", value: content});
   }
 
   return (
