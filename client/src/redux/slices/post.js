@@ -13,6 +13,7 @@ export const postSlice = createSlice({
         },
         addPost: (state, action ) => {
             state.userPosts.push(state.currentPost);
+            // state.currentPost = {};
         },
         updateCurrentPost: (state, action) => {
             state.currentPost[action.payload.name] = action.payload.value

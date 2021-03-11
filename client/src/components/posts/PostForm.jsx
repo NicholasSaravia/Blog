@@ -12,8 +12,7 @@ export const PostForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    agent.postActions.create(currentPost).then((createdPost) => {
-      console.log(createdPost);
+    agent.postActions.create(currentPost).then(() => {
       dispatch(addPost());
     });
   };
