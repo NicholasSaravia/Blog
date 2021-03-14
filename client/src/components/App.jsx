@@ -23,7 +23,6 @@ export const App = () => {
          .then((user) => {
            dispatch(setUser(user));
            setUserCopy(user);
-           console.log("got user", user);
          })
          .then(() => {
            setLoading(false);
@@ -34,7 +33,7 @@ export const App = () => {
              setNetworkError(true);
            }
            // user is unauthorized
-           else if (error.response.status == 401) {
+           else if (error.response.status === 401) {
              localStorage.removeItem("token");
              dispatch(setUser());
            }
@@ -66,15 +65,16 @@ export const App = () => {
           <Redirect to={{ pathname: "/profile/nick" }}></Redirect>
         )}
       </Route>
-
-      <section className="body">
-        <Route exact path="/">
+      <Route exact path="/">
+        <section className="body">
           <div>home page</div>
-        </Route>
-        <Route path="/profile/:displayName">
+        </section>
+      </Route>
+      <Route path="/profile/:displayName">
+        <section className="body">
           <Profile></Profile>
-        </Route>
-      </section>
+        </section>
+      </Route>
       <Route>
         <div>This page does not exist</div>
       </Route>

@@ -12,7 +12,6 @@ export const userSlice = createSlice({
   },
   reducers: {
     setUser: (state, action) => {
-      console.log("reducer", action.payload);
       if (typeof (action.payload === "undefined")) {
         action.payload = {
           username: null,
