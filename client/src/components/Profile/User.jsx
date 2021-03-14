@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, Container, Icon, Image } from 'semantic-ui-react';
+import { Card, Icon, Image } from 'semantic-ui-react';
 import userImg from '../../images/matthew.png'
 
 export const User = () => {

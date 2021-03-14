@@ -33,7 +33,6 @@ export const Login = () => {
             };
             history.push(location);
           }).catch(error => {
-            console.log(error);
           });
             
     }

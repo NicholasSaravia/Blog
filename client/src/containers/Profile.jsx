@@ -1,6 +1,5 @@
 import React from 'react'
 import { Container } from 'semantic-ui-react'
-import { TextEditor } from '../components/common/TextEditor'
 import { PostForm } from '../components/posts/PostForm'
 import { Posts } from '../components/posts/Posts'
 import { User } from '../components/profile/User'

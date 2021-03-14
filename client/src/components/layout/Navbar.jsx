@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { NavLink, useHistory, useLocation } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import { Menu } from 'semantic-ui-react';
 import { setUser } from '../../redux/slices/user';
 
@@ -34,6 +34,7 @@ export const Navbar = ({user}) => {
           dispatch(
             setUser()
           );
+          break;
         default:
           break;
       }

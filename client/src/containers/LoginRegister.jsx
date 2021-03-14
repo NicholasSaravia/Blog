@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { Button, Card, Container, Divider, Grid, Icon } from 'semantic-ui-react'
+import { Button, Card, Container, Divider, Icon } from 'semantic-ui-react'
 import { Login } from '../components/account/Login';
 import { Register } from '../components/account/Register';
 import "../css/loginRegister.css";

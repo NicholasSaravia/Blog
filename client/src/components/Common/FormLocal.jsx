@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react'
-import { Button, Card, Container, Divider, Form, Icon } from 'semantic-ui-react'
-import { TextEditor } from './TextEditor';
+import React from 'react'
+import { Button, Card, Divider, Form, Icon } from 'semantic-ui-react'
 
 export const FormLocal = ({
   formTitle,
